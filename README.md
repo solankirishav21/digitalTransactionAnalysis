@@ -33,6 +33,7 @@ The dataset spans transactions between August 2023 and August 2024, making it id
 - `digital_wallet_dashboard.pbix` – Interactive Power BI dashboard file
 - `digital_wallet_analysis.ipynb` – Python (Colab) notebook for trend analysis, visualizations, and exports
 - `.xlsx` files – Summary exports for top merchants, revenue trends, and other KPIs
+- `PowerBI_dashboard.pdf` - The pdf file inside the powerBI/results folder shows the dashboard made by PowerBI.
 - `.png` files – Screenshots of dashboard and visual plots
 - `README.md` – Documentation for the entire project
 
@@ -41,24 +42,29 @@ The dataset spans transactions between August 2023 and August 2024, making it id
 ## Step-by-Step Project Workflow
 
 1. **Data Loading & Setup**
+
    - Loaded `.csv` data into PostgreSQL using pgAdmin
    - Created structured tables and verified schema
 
 2. **SQL Analysis & View Creation**
+
    - Built views for monthly revenue, top merchants, product category revenue, cashback trends, etc.
    - Validated views for use in Power BI and Python
 
 3. **Power BI Dashboard Development**
+
    - Connected Power BI to PostgreSQL views
    - Created 3 pages: Executive Overview, Customer Insights, Merchant Performance
    - Used slicers, KPIs, bar/line charts, pie charts
 
 4. **Python Analysis in Google Colab**
+
    - Uploaded SQL view exports to Colab
    - Performed detailed trend analysis, failed transaction breakdown, and behavioral segmentation
    - Visualized findings using `seaborn` and `matplotlib`
 
 5. **Excel Exports**
+
    - Exported cleaned summary tables for reporting
    - Saved top insights like monthly growth, category trends, and merchant performance
 
@@ -70,28 +76,34 @@ The dataset spans transactions between August 2023 and August 2024, making it id
 ## Analysis Findings
 
 ### Revenue & Transaction Trends
+
 - The digital wallet experienced strong revenue growth from August 2023 to July 2024, peaking at ₹2.15M in July.
 - A sharp 42% drop occurred in August 2024, potentially due to seasonal dips or platform performance issues.
 - Average transaction value remained stable at approximately ₹4.9K, indicating consistent user spend behavior.
 
 ### Payment Behavior
+
 - UPI and Wallets were the most-used payment methods in terms of volume.
 - However, Credit/Debit Cards contributed significantly higher revenue per transaction.
 - This suggests two user segments: price-sensitive (UPI/Wallet) vs. high-value (Cards).
 
 ### Product Category Performance
+
 - Electronics and Fashion generated the highest revenue.
 - Food and Lifestyle had higher transaction frequency but lower average values.
 
 ### Merchant & Cashback Insights
+
 - The top-performing merchant generated the most revenue and gave the highest cashback.
 - Loyalty programs with consistent point rewards led to better merchant repeatability.
 
 ### Failed Transaction Analysis
+
 - Declined payments and network errors were primary failure reasons, contributing to 8–12% revenue leakage.
 - Reducing failures could improve overall platform performance significantly.
 
 ### Device & Channel Preferences
+
 - Mobile devices accounted for the majority of transactions.
 - Desktop users had fewer transactions but higher average order values, suggesting enterprise or high-ticket buyers.
 
